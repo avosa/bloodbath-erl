@@ -3,8 +3,8 @@
 -export([perform/4]).
 
 perform(Method, Endpoint, Body, Config) ->
-    ApiKey = Config#state.api_key,
-    ApiBase = Config#state.api_base,
+    ApiKey = bloodbath_configuration:get_api_key(Config),
+    ApiBase = bloodbath_configuration:get_api_base(Config),
     Url = ApiBase ++ Endpoint,
     ContentType = "application/json",
     Headers = [{"Authorization", "Bearer " ++ ApiKey}, {"Content-Type", ContentType}],

@@ -5,7 +5,7 @@ start() ->
     {ok, _Pid} = application:start(bloodbath).
 
 init([]) ->
-    {ok, bloodbath_configuration:init()}.
+    {ok, bloodbath_configuration:new()}.
 
 get_config() ->
     bloodbath_configuration:get_config().

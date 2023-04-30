@@ -1,6 +1,6 @@
 # bloodbath
 
-An OTP application
+The Bloodbath Erlang library provides convenient access to the Bloodbath API from applications written in the Erlang and Elixir language.
 
 ## Build
 
