@@ -2,23 +2,6 @@
 
 The [bloodbath-erl](https://github.com/avosa/bloodbath-erl) library provides convenient access to the Bloodbath API from applications written in the Erlang and Elixir language. This library will eventually be moved [here](https://github.com/bloodbath-io).
 
-## Project Structure
-
-```erlang
-bloodbath_erl/
-  ├── src/
-  │   ├── bloodbath.erl
-  │   ├── bloodbath_configuration.erl
-  │   ├── bloodbath_event.erl
-  │   ├── bloodbath_rest_adapter.erl
-  │   ├── bloodbath_threading.erl
-  │   └── bloodbath_verbose.erl
-  ├── test/
-  │   └── bloodbath_test.erl
-  ├── rebar.config
-  └── README.md
-```
-
 ## Installation
 
 ### Erlang
