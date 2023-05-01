@@ -1,6 +1,6 @@
-# bloodbath
+# Bloodbath-erl
 
-The Bloodbath Erlang library provides convenient access to the Bloodbath API from applications written in the Erlang and Elixir language. This library will eventually be moved [here](https://github.com/bloodbath-io).
+The [bloodbath-erl](https://github.com/avosa/bloodbath-erl) library provides convenient access to the Bloodbath API from applications written in the Erlang and Elixir language. This library will eventually be moved [here](https://github.com/bloodbath-io).
 
 ## Project Structure
 
