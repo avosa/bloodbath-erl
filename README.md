@@ -28,7 +28,7 @@ Bloodbath can be installed as a dependency in your Erlang/Elixir project by addi
     {bloodbath, "1.0.0"}
 ]}.
 ```
-After updating your dependencies, you can run `rebar3 compile` for Erlang projaect or `mix deps.get` for Elixir project to download and compile the dependencies.
+After updating your dependencies, you can run `rebar3 compile` for Erlang project or `mix deps.get` for Elixir project to download and compile the dependencies.
 
 ## Usage
 
