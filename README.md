@@ -21,7 +21,7 @@ bloodbath_erl/
 
 ## Installation
 
-Bloodbath can be installed as a dependency in your Erlang/Elixir project by adding the following to your rebar.config file:
+Bloodbath can be installed as a dependency in your Erlang/Elixir project by adding the following to your rebar.config/mix.ex file:
 
 ```erlang
 {deps, [
