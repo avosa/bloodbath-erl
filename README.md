@@ -5,7 +5,7 @@ The Bloodbath Erlang library provides convenient access to the Bloodbath API fro
 ## Project Structure
 
 ```erlang
-bloodbath_erlang/
+bloodbath_erl/
   ├── src/
   │   ├── bloodbath.erl
   │   ├── bloodbath_configuration.erl
