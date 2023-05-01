@@ -23,7 +23,7 @@ bloodbath_erl/
 
 ### Erlang
 
-Bloodbath can be installed as a dependency in your Erlang project by adding the following to your rebar.config file:
+Bloodbath can be installed as a dependency in your Erlang project by adding the following to your `rebar.config` file:
 
 ```erlang
 {deps, [
@@ -34,7 +34,7 @@ After updating your dependencies, run `rebar3 compile` to download and compile t
 
 ### Elixir
 
-To use Bloodbath in your Elixir project, add the following to your mix.exs file:
+To use Bloodbath in your Elixir project, add the following to your `mix.exs` file:
 
 ```elixir
 defp deps do
@@ -151,4 +151,4 @@ Make sure to replace "b7ccff..." with the actual ID of an event you want to find
 
 # Conclusion
 
-Bloodbath is a powerful library that simplifies event scheduling and management. This README should have given you an idea of how to use it in your Erlang application. For more information, see the [official documentation](https://docs.bloodbath.io/).
+Bloodbath is a powerful library that simplifies event scheduling and management. This README should have given you an idea of how to use it in your Erlang and Elixir applications. For more information, see the [official documentation](https://docs.bloodbath.io/).
