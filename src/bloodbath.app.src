@@ -1,6 +1,6 @@
 {application, bloodbath,
  [
-  {description, "The Bloodbath Erlang library provides convenient access to the Bloodbath API from applications written in the Erlang language."},
+  {description, "The Bloodbath Erlang library provides convenient access to the Bloodbath API from applications written in the Erlang and/or Elixir language."},
   {vsn, "1.0.0"},
   {modules, []},
   {registered, []},
