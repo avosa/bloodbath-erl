@@ -84,39 +84,60 @@ To use Bloodbath in your Elixir application, you can create a module like this:
 
 ```elixir 
 defmodule MyApp do
-  require Bloodbath
-
   def schedule_event do
-    :ok = :application.ensure_all_started(:bloodbath)
+    :ok = Application.ensure_all_started(:bloodbath)
 
     event = %{
-      "scheduled_for" => DateTime.add(DateTime.utc_now(), 60, :second),
+      "scheduled_for" => :calendar.universal_time() + {0, 0, 1, 0, 0, 0},
       "headers" => %{},
       "method" => "post",
       "body" => "some body content",
       "endpoint" => "https://api.acme.com/path"
     }
 
-    {:ok, result} = Bloodbath.schedule_event(event)
-    IO.inspect(result, label: "Scheduled event")
+    case :bloodbath_event.schedule(event) do
+      {:ok, result} ->
+        IO.puts("Scheduled event: #{result}")
+
+      {:error, reason} ->
+        IO.puts("Error scheduling event: #{reason}")
+    end
   end
 
   def list_events do
-    :ok = :application.ensure_all_started(:bloodbath)
-    {:ok, result} = Bloodbath.list_events()
-    IO.inspect(result, label: "List of events")
+    :ok = Application.ensure_all_started(:bloodbath)
+
+    case :bloodbath_event.list() do
+      {:ok, result} ->
+        IO.puts("List of events: #{result}")
+
+      {:error, reason} ->
+        IO.puts("Error listing events: #{reason}")
+    end
   end
 
   def find_event(event_id) do
-    :ok = :application.ensure_all_started(:bloodbath)
-    {:ok, result} = Bloodbath.find_event(event_id)
-    IO.inspect(result, label: "Found event with ID #{event_id}")
+    :ok = Application.ensure_all_started(:bloodbath)
+
+    case :bloodbath_event.find(event_id) do
+      {:ok, result} ->
+        IO.puts("Found event with ID #{event_id}: #{result}")
+
+      {:error, reason} ->
+        IO.puts("Error finding event: #{reason}")
+    end
   end
 
   def cancel_event(event_id) do
-    :ok = :application.ensure_all_started(:bloodbath)
-    {:ok, result} = Bloodbath.cancel_event(event_id)
-    IO.inspect(result, label: "Cancelled event with ID #{event_id}")
+    :ok = Application.ensure_all_started(:bloodbath)
+
+    case :bloodbath_event.cancel(event_id) do
+      {:ok, result} ->
+        IO.puts("Cancelled event with ID #{event_id}: #{result}")
+
+      {:error, reason} ->
+        IO.puts("Error cancelling event: #{reason}")
+    end
   end
 end
 ```
