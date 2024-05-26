@@ -155,4 +155,4 @@ Make sure to replace "b7ccff..." with the actual ID of an event you want to find
 
 # Conclusion
 
-Bloodbath is a powerful library that simplifies event scheduling and management. This README should have given you an idea of how to use it in your Erlang and Elixir applications. For more information, see the [official documentation](https://docs.bloodbath.io/).
+Bloodbath is a powerful library that simplifies event scheduling and management. For more information, see the [official documentation](https://docs.bloodbath.io/).
